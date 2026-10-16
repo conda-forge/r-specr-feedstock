@@ -1,4 +1,4 @@
-{% set version = '1.0.0' %}
+{% set version = "1.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/specr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/specr/specr_{{ version }}.tar.gz
-  sha256: 5db5060ae27e65df84cb66d691185098ff5a91daf6c227519d1de89b530fedf8
+  sha256: 22771eb11ca20065e8dcf36cd5924e9138ea8eb78adb8b52f71b8daf604ae70c
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -72,10 +72,7 @@ about:
   home: https://masurp.github.io/specr/
   dev_url: https://github.com/masurp/specr
   license: GPL-3.0-only
-  summary: 'Provides utilities for conducting specification curve analyses (Simonsohn, Simmons
-    & Nelson (2020, <doi: 10.1038/s41562-020-0912-z>) or multiverse analyses (Steegen,
-    Tuerlinckx, Gelman & Vanpaemel, 2016, <doi: 10.1177/1745691616658637>) including
-    functions to setup, run, evaluate, and plot all specifications.'
+  summary: 'Provides utilities for conducting specification curve analyses (Simonsohn, Simmons & Nelson (2020, <doi: 10.1038/s41562-020-0912-z>) or multiverse analyses (Steegen, Tuerlinckx, Gelman & Vanpaemel, 2016, <doi: 10.1177/1745691616658637>) including functions to setup, run, evaluate, and plot all specifications.'
   license_family: GPL3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
